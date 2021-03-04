@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 
 import { isNotString, isUndefined, isNotUndefined, error } from "@utils/index"
 import { useViewportInfo } from "@hooks"
@@ -45,6 +45,7 @@ const ImageQL = ({
     }
   }
 
+  console.log("imageql", setGatsbyFluidData(data, device), device)
   return (
     <>
       <GatsbyImage

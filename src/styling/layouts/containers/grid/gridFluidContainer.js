@@ -13,9 +13,10 @@ import { isNotUndefined, warn } from "@utils/index"
  *
  */
 
-const StyledGridFluidContainer = styled.div`
+const GridFluidContainer = styled.div`
   ${Grid}
   grid-template-columns: ${({ theme, columns, cWidth }) => {
+    console.log("GridFluidContainer fired")
     if (isNotUndefined(columns)) {
       warn(
         `StyledGridFluidContainer`,
@@ -50,12 +51,12 @@ const StyledGridFluidContainer = styled.div`
   ${props => props.$style ?? {}}
 `
 
-const GridFluidContainer = ({ children, ...props }) => {
-  return (
-    <>
-      <StyledGridFluidContainer {...props}>{children}</StyledGridFluidContainer>
-    </>
-  )
-}
+// const GridFluidContainer = ({ children, ...props }) => {
+//   return (
+//     <>
+//       <StyledGridFluidContainer {...props}>{children}</StyledGridFluidContainer>
+//     </>
+//   )
+// }
 
 export default GridFluidContainer

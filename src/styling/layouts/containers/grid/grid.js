@@ -9,13 +9,16 @@ import { useResponsiveSize } from "@hooks/index"
 const Grid = css`
   ${Space}
   ${Size}
-
+ 
   display: grid;
-  justify-items: ${({ left, centerX, right, stretchX }) => {
+  justify-items: ${({ h, left, centerX, right, stretchX }) => {
+    console.log("Grid fired")
     if (left) return `start`
     if (centerX) return `center`
     if (right) return `end`
     if (stretchX) return `stretch`
+
+    console.log("height:", h)
   }}}};
   align-items: ${({ top, centerY, bottom, stretchY }) => {
     if (top) return `start`

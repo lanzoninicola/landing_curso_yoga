@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import { GridFluidContainer } from "@layouts"
 import { ImageQL } from "@images"
 import { useViewportInfo } from "@hooks"
+import { colorsTheme } from "@theme"
 
 const SplashScreen = () => {
   const { height } = useViewportInfo()
@@ -41,9 +42,13 @@ const SplashScreen = () => {
     }
   `)
 
+  React.useEffect(() => {
+    console.log("useEffect", height)
+  })
+
   return (
-    <GridFluidContainer>
-      <ImageQL data={data} alt="Mulher em posiçao facil" />
+    <GridFluidContainer height="945" bg={colorsTheme("blue")}>
+      {/* <ImageQL data={data} alt="Mulher em posiçao facil" /> */}
     </GridFluidContainer>
   )
 }

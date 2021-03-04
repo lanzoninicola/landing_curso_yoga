@@ -5,6 +5,7 @@ import { useResponsiveSize } from "@hooks/index"
 
 const Size = css`
   height: ${({ h, height, h100, h100v, hAuto, hFixed }) => {
+    console.log("size fired")
     if (h100) return `100%`
     if (h100v) return `100vh`
     if (hAuto) return `auto`
@@ -18,6 +19,7 @@ const Size = css`
 
       return useResponsiveSize(inputValue)
     }
+
     return `auto`
   }};
   width: ${({ w, width, w100, w100v, wAuto, wFixed }) => {
