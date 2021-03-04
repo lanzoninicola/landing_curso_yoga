@@ -39,7 +39,7 @@ export default function setGatsbyFluidData(
       )
     }
 
-    return edgesArray[0].node?.childImageSharp?.fluid
+    return edgesArray[0].node?.childImageSharp?.gatsbyImageData
   }
 
   /**

@@ -17,7 +17,7 @@ import { Link } from "gatsby"
           },
 */
 
-const StyledLink = styled(motion.custom(Link))`
+const StyledLink = styled(motion(Link))`
   text-decoration: none;
   cursor: pointer;
 `

@@ -66,6 +66,12 @@ const StyledHelpImageQL = styled.pre`
   font-size: 14px;
 `
 
-const HelpImageQL = () => <StyledHelpImageQL>{queryString}</StyledHelpImageQL>
+const HelpImageQL = () => {
+  return (
+    <main>
+      <StyledHelpImageQL>{queryString}</StyledHelpImageQL>
+    </main>
+  )
+}
 
 export default HelpImageQL

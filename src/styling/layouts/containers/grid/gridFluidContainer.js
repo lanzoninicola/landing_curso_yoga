@@ -52,7 +52,9 @@ const StyledGridFluidContainer = styled.div`
 
 const GridFluidContainer = ({ children, ...props }) => {
   return (
-    <StyledGridFluidContainer {...props}>{children}</StyledGridFluidContainer>
+    <>
+      <StyledGridFluidContainer {...props}>{children}</StyledGridFluidContainer>
+    </>
   )
 }
 

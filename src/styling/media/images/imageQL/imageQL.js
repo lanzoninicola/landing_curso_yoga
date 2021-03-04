@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import Img from "gatsby-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 import { isNotString, isUndefined, isNotUndefined, error } from "@utils/index"
 import { useViewportInfo } from "@hooks"
@@ -47,16 +47,26 @@ const ImageQL = ({
 
   return (
     <>
-      {!help && (
-        <Img
-          fluid={setGatsbyFluidData(data, device)}
-          style={setWrapperStyle()}
-          imgStyle={setImageStyle()}
-          {...props}
-        />
-      )}
-      {help && <HelpImageQL />}
+      <GatsbyImage
+        image={setGatsbyFluidData(data, device)}
+        style={setWrapperStyle()}
+        imgStyle={setImageStyle()}
+        alt={alt}
+        {...props}
+      />
     </>
+
+    // <div>
+    //   {/* {!help && ( */}
+    //   <GatsbyImage
+    //     image={setGatsbyFluidData(data, device)}
+    //     style={setWrapperStyle()}
+    //     imgStyle={setImageStyle()}
+    //     {...props}
+    //   />
+    //   {/* )} */}
+    //   {/* {help && <HelpImageQL />} */}
+    // </div>
   )
 }
 

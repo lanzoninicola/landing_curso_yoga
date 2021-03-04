@@ -3,7 +3,7 @@ import styled from "styled-components"
 import Flex from "./flex"
 import { motion } from "framer-motion"
 
-const FlexMotion = styled(motion.custom(Flex))``
+const FlexMotion = styled(motion(Flex))``
 
 const FlexMotionContainer = ({ children, ...props }) => {
   return (
